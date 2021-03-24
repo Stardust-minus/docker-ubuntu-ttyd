@@ -9,4 +9,4 @@ RUN wget "https://github.com/tsl0922/ttyd/releases/download/1.6.3/ttyd.x86_64" &
 WORKDIR /root
 EXPOSE 8080
 
-CMD ['/usr/bin/ttyd', '-p', '8080', 'bash']
+CMD ["/usr/bin/ttyd", "-p", "8080", "bash"]
