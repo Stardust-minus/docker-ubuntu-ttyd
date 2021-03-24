@@ -7,5 +7,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install openjdk-11-jre-headless scree
 RUN wget "https://github.com/tsl0922/ttyd/releases/download/1.6.3/ttyd.x86_64" && mv ttyd.x86_64 /usr/bin/ttyd && chmod +x /usr/bin/ttyd
 
 WORKDIR /root
+EXPOSE 8080
 
-CMD ['ttyd', '-p', '8080', 'bash']
+CMD ['/usr/bin/ttyd', '-p', '8080', 'bash']
