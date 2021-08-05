@@ -14,4 +14,4 @@ RUN rm -rf /var/lib/apt/lists/*
 WORKDIR /root
 ENV LANG=C.UTF-8
 
-CMD ["sh", "-c", "/usr/bin/ttyd -p $PORT bash"]
+CMD ["sh", "-c", "/usr/bin/ttyd -p $PORT bash -c ${USERNAME:-user}:${PASSWORD:-password}"]
